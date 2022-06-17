@@ -15,3 +15,4 @@
  9. What is **Selenium Webdriver**
  10. What are some of the tools used for load testing
  11. What is the big o notation in computer science.
+ 12. What are the advantages of Git over SVN?
