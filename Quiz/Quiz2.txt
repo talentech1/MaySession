@@ -1,0 +1,3 @@
+QUIZ 2
+
+Print all numbers between 1 and 1000 that are devideable by 4 and 7
