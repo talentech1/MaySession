@@ -1,4 +1,4 @@
-## Quiz 2
+## Quiz 3
 
 ### Write a program to find the smallest number in an array
 
