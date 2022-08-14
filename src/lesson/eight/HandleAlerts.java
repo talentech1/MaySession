@@ -14,6 +14,7 @@ public class HandleAlerts {
 	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+				
 		driver.get("file:///Users/msiddique/eclipse-workspace/MaySession/HTMLPages/AlertPage.html");
 		
 		WebElement body = driver.findElement(By.tagName("body"));

@@ -1,0 +1,45 @@
+<html>
+<body>
+	<div name="item" class="inventory_item">
+		<div class="inventory_item_img">
+			<a href="#" id="item_4_img_link"><img alt="Sauce Labs Backpack"
+				style="width: 150px; height: 175px;" class="inventory_item_img"
+				src="https://www.saucedemo.com/static/media/sauce-backpack-1200x1500.34e7aa42.jpg"></a>
+		</div>
+		<div class="inventory_item_description">
+			<div class="inventory_item_label">
+				<a href="#" id="item_4_title_link">
+					<div class="inventory_item_name">Sauce Labs Backpack</div>
+				</a>
+				<div class="inventory_item_desc">carry.allTheThings() with the
+					sleek, streamlined Sly Pack that melds uncompromising style with
+					unequaled laptop and tablet protection.</div>
+			</div>
+			<div class="pricebar">
+				<div class="inventory_item_price">$29.99</div>
+				<button class="btn btn_secondary btn_small btn_inventory"
+					data-test="remove-sauce-labs-backpack"
+					id="remove-sauce-labs-backpack" name="remove-sauce-labs-backpack">Remove</button>
+			</div>
+		</div>
+		<hr>
+		<br>
+	</div>
+</body>
+
+<script>
+let count = 0;
+const createItems = () => {
+	const node = document.getElementsByName("item")[0]
+	const clone = node.cloneNode(true);
+	document.body.appendChild(clone);
+	count++;
+	if(count >= 10){
+		console.log('clear interval')
+		clearInterval(interval);
+	}
+};
+
+const interval = setInterval(createItems, 2000);
+</script>
+</html>

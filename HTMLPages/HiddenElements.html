@@ -1,0 +1,47 @@
+<!doctype html>
+
+
+<body>
+    <button id='show_element' onClick="showAll()"> Show All elements</button>
+    <button id='hide_element' onClick="hideAll()"> Hide All elements</button>
+    <button id='show_after5' onClick="showAfterDelay(5000)"> Show after 5</button>
+    <button id='show_after10' onClick="showAfterDelay(10000)"> Show after 10</button>
+    <button id='show_after15' onClick="showAfterDelay(15000)"> Show after 15</button>
+    <button id='show_after20' onClick="showAfterDelay(20000)"> Show after 20</button>
+    
+	<h1 style="background-color:Tomato; display: none;">Tomato</h1>
+	<h1 style="background-color:Orange; display: none;">Orange</h1>
+	<h1 style="background-color:DodgerBlue; display: none;">DodgerBlue</h1>
+	<h1 style="background-color:MediumSeaGreen; display: none;">MediumSeaGreen</h1>
+	<h1 style="background-color:Gray; display: none;">Gray</h1>
+	<h1 style="background-color:SlateBlue; display: none;">SlateBlue</h1>
+	<h1 style="background-color:Violet; display: none;">Violet</h1>
+	<h1 style="background-color:LightGray; display: none;">LightGray</h1>
+
+</body>
+<script>
+	function showAfterDelay(delay) {
+		setTimeout(function () {
+			let elements = document.getElementsByTagName("h1");
+			for (const el of elements) {
+				el.style.display = "block";
+			}
+		}, delay);
+	}
+	
+	function showAll(){
+		let elements = document.getElementsByTagName("h1");
+		for (const el of elements) {
+			el.style.display = "block";
+		}
+	}
+	
+	function hideAll(){
+		let elements = document.getElementsByTagName("h1");
+		for (const el of elements) {
+			el.style.display = "none";
+		}
+	}
+	
+	
+</script>
