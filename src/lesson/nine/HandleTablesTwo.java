@@ -15,11 +15,16 @@ public class HandleTablesTwo {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("file:///Users/msiddique/eclipse-workspace/MaySession/HTMLPages/Tables.html");
-		List<WebElement> rows = driver.findElements(By.tagName("td"));
-		for(WebElement r: rows) {
-			System.out.println(r.getText());
+
+		List<WebElement> rows = driver.findElements(By.tagName("tr"));
+		for (WebElement r : rows) {
+			List<WebElement> datas = r.findElements(By.tagName("td"));
+			if (datas.size() > 0) {
+				System.out.println(datas.get(0).getText());
+			}
+
 		}
-		
+
 		driver.quit();
 	}
 
